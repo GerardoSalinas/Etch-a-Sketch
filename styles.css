@@ -40,9 +40,12 @@ body {
 .square:hover {
     scale: 0.9;
     background-color: rgb(192, 28, 192);
-    opacity: 0.9;
+    border: 2px solid aquamarine;
+    border-radius: 35px;
+    opacity: 0.9; /*  this vlaue needs to be 0.1 initially */
     color: #faf7f7;
-    transition: 150ms linear;
+    transition: 125ms linear 100ms;
+    
 }
 /* colors:
 #2F6690
