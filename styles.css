@@ -20,6 +20,30 @@ body {
     margin: 0px;
 }
 
+.grid-container {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-container > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid aquamarine;
+    border-radius: 10px;
+    font-weight: 500;
+    flex-basis: 70px;
+    height: 70px;
+}
+
+.square:hover {
+    scale: 0.9;
+    background-color: rgb(192, 28, 192);
+    opacity: 0.9;
+    color: #faf7f7;
+    transition: 150ms linear;
+}
 /* colors:
 #2F6690
 #3A7CA5
