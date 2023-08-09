@@ -23,7 +23,9 @@ body {
 .grid-container {
     padding-top: 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .grid-container > *{
@@ -37,14 +39,14 @@ body {
     height: 70px;
 }
 
-.square:hover {
+.hover {
     scale: 0.9;
-    background-color: rgb(192, 28, 192);
+    /* background-color: rgb(192, 28, 192); */
     border: 2px solid aquamarine;
     border-radius: 35px;
     opacity: 0.9; /*  this vlaue needs to be 0.1 initially */
     color: #faf7f7;
-    transition: 125ms linear 100ms;
+    transition: 200ms linear 10ms;
     
 }
 /* colors:
