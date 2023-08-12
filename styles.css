@@ -25,16 +25,14 @@ body {
     border: 2px solid #2F6690;
     border-radius: 10px;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .grid-container {
     display: flex;
-
-    justify-self: center;
+    /* flex-direction: column; */
     width: 960px;
-    height: 450px;
-    justify-content: center;
+    height: 960px;
     /* gap: 1px; */
     margin: auto;
     flex-wrap: wrap;
@@ -42,31 +40,37 @@ body {
 
 .row > *{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1;
     background-color: #aca9a9;
     border: 2px solid aquamarine;
     border-radius: 10px;
-    /* flex-basis: 90px; */
-    width: 80px;
-    height: auto;
+    width: auto;
+    padding-top: 100%;
 }
 
 .hover {
     scale: 0.9;
     /* background-color: rgb(192, 28, 192); */
     border: 2px solid aquamarine;
-    border-radius: 40px;
+    border-radius: 60px;
     opacity: 0.9; /*  this vlaue needs to be 0.1 initially */
     color: #faf7f7;
-    transition: 200ms linear 10ms;
+    transition: 100ms linear 10ms;
     
 }
 
 .row {
     display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
+    /* border: 2px solid #2F6690; */
+    width: auto;
+    height: auto;
 }
+
+
 /* colors:
 #2F6690
 #3A7CA5

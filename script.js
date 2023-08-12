@@ -17,20 +17,31 @@ function getRandomColor(){//returns a string containing all three values for a r
 
 function generateGrid(rows, columns){
     let square;
-    let rowDivs;
+    let rowDiv;
     for (let i = 0; i<rows; i++){
-        rowDivs = document.createElement('div');
-        rowDivs.classList.add('row');
-        gridContainer.appendChild(rowDivs);
+        rowDiv = document.createElement('div');
+        rowDiv.classList.add('row');
 
         for (let j = 0; j<columns; j++){
             square = document.createElement('div');
             square.classList.add('square');
             addsEvents(square);
-            rowDivs.appendChild(square);
+            rowDiv.appendChild(square);
         }
+        gridContainer.appendChild(rowDiv);
     }
     return;
+}
+
+function removeGrid(){
+    const parent = gridContainer;
+    let count = 0;
+    while (parent.hasChildNodes()) {
+        count++;
+        parent.removeChild(parent.firstChild);
+        
+    }
+    
 }
 
 function addsEvents(node){
@@ -72,6 +83,7 @@ dimensionsButton.addEventListener('click', () => {
     rows = validateNumber(rows);
     let columns = parseInt(prompt("Enter grid columns:"));
     columns = validateNumber(columns);
+    removeGrid();
     generateGrid(rows, columns);
 });
 
