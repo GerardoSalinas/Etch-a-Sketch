@@ -17,13 +17,17 @@ function getRandomColor(){//returns a string containing all three values for a r
 
 function generateGrid(rows, columns){
     let square;
+    let rowDivs;
     for (let i = 0; i<rows; i++){
+        rowDivs = document.createElement('div');
+        rowDivs.classList.add('row');
+        gridContainer.appendChild(rowDivs);
+
         for (let j = 0; j<columns; j++){
             square = document.createElement('div');
             square.classList.add('square');
-            // square.innerHTML = 'square x';
-            gridContainer.appendChild(square);
             addsEvents(square);
+            rowDivs.appendChild(square);
         }
     }
     return;

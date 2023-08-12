@@ -30,27 +30,26 @@ body {
 
 .grid-container {
     display: flex;
+
     justify-self: center;
     width: 960px;
     height: 450px;
-    display: flex;
     justify-content: center;
     /* gap: 1px; */
     margin: auto;
     flex-wrap: wrap;
 }
 
-.grid-container > *{
+.row > *{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #aca9a9;
     border: 2px solid aquamarine;
     border-radius: 10px;
-    flex-shrink: 2;
-    font-weight: 500;
-    flex-basis: 70px;
-    height: 70px;
+    /* flex-basis: 90px; */
+    width: 80px;
+    height: auto;
 }
 
 .hover {
@@ -62,6 +61,11 @@ body {
     color: #faf7f7;
     transition: 200ms linear 10ms;
     
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 /* colors:
 #2F6690
