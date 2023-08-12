@@ -1,12 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 body {
     font-family: 'Roboto',sans-serif;
+    /* background-color: #d1141a; */
 }
 .button-container {
     display: flex;
     justify-content: center;
+}
+
+.title {
+    font-family: 'Lobster',sans-serif;
+    color: rgb(218, 185, 1);
+    font-size: 30px;
+    text-align: center;
 }
 
 .dimButton {
@@ -17,14 +25,18 @@ body {
     border: 2px solid #2F6690;
     border-radius: 10px;
     font-weight: 700;
-    margin: 0px;
+    margin-top: 20px;
 }
 
 .grid-container {
-    padding-top: 15px;
+    display: flex;
+    justify-self: center;
+    width: 960px;
+    height: 450px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    /* gap: 1px; */
+    margin: auto;
     flex-wrap: wrap;
 }
 
@@ -32,8 +44,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #aca9a9;
     border: 2px solid aquamarine;
     border-radius: 10px;
+    flex-shrink: 2;
     font-weight: 500;
     flex-basis: 70px;
     height: 70px;
@@ -43,7 +57,7 @@ body {
     scale: 0.9;
     /* background-color: rgb(192, 28, 192); */
     border: 2px solid aquamarine;
-    border-radius: 35px;
+    border-radius: 40px;
     opacity: 0.9; /*  this vlaue needs to be 0.1 initially */
     color: #faf7f7;
     transition: 200ms linear 10ms;
