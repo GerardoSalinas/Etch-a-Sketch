@@ -38,13 +38,10 @@ body {
 
 .grid-container {
     display: flex;
-    /* flex-direction: column; */
     width: 960px;
     height: 960px;
-    padding: 10px;
-    /* gap: 1px; */
+    overflow: hidden;
     margin: auto;
-    margin-bottom: 15px;
     flex-wrap: wrap;
 }
 
@@ -58,10 +55,9 @@ body {
 
 .hover {
     scale: 0.9;
-    /* background-color: rgb(192, 28, 192); */
     border: 2px solid aquamarine;
     border-radius: 60px;
-    opacity: 0.9; /*  this vlaue needs to be 0.1 initially */
+    opacity: 0.9; 
     color: #faf7f7;
     transition: 100ms linear 10ms;
     
@@ -73,7 +69,6 @@ body {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    /* border: 2px solid #2F6690; */
     width: auto;
     height: auto;
 }

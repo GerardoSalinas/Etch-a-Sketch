@@ -1,16 +1,16 @@
 
 // functions here
-function validateNumber(number){//works properly
+function validateNumber(number){
     while (number <= 0 || Number.isInteger(number) === false){
         number = parseInt(prompt("Only positive integers allowed: "))
     }
     return number
 }
 
-function getRandomColor(){//returns a string containing all three values for a random rgb color
+function getRandomColor(){
     let rgbValues = [] ;
     for (let i = 0; i<3; i++){
-        rgbValues[i] = Math.floor(Math.random() * (255 - 0 + 1) ) + 0;//creates a random number [0,255]
+        rgbValues[i] = Math.floor(Math.random() * (255 - 0 + 1) ) + 0;
     } 
     return `rgb(${rgbValues[0]},${rgbValues[1]},${rgbValues[2]})`; 
 }
@@ -57,21 +57,17 @@ function addsEvents(node){
     });
 }
 
-let opacityValue = 0.1;
 
 //
 
 
 //query selectors
+let opacityValue = 0.1;
 let gridContainer = document.querySelector('.grid-container');
 let dimensionsButton = document.querySelector('.dimButton');
 let mainTitle = document.querySelector('.title');
 
-generateGrid(8, 8); //generates default 16x16 grid
-
-
-
-
+generateGrid(16, 16); //generates default 16x16 grid
 
 //
 
