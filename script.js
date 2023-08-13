@@ -35,9 +35,7 @@ function generateGrid(rows, columns){
 
 function removeGrid(){
     const parent = gridContainer;
-    let count = 0;
     while (parent.hasChildNodes()) {
-        count++;
         parent.removeChild(parent.firstChild);
         
     }
@@ -67,6 +65,7 @@ let opacityValue = 0.1;
 //query selectors
 let gridContainer = document.querySelector('.grid-container');
 let dimensionsButton = document.querySelector('.dimButton');
+let mainTitle = document.querySelector('.title');
 
 generateGrid(8, 8); //generates default 16x16 grid
 
@@ -81,10 +80,14 @@ generateGrid(8, 8); //generates default 16x16 grid
 dimensionsButton.addEventListener('click', () => {
     let rows = parseInt(prompt("Enter grid rows:"));
     rows = validateNumber(rows);
-    let columns = parseInt(prompt("Enter grid columns:"));
-    columns = validateNumber(columns);
+    let columns = rows;
     removeGrid();
     generateGrid(rows, columns);
+});
+
+mainTitle.addEventListener('click', () => {
+    removeGrid();
+    generateGrid(8, 8);
 });
 
 
